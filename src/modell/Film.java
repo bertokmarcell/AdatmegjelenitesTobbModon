@@ -1,4 +1,4 @@
-package app;
+package modell;
 
 public class Film {
     private String rendezo;
