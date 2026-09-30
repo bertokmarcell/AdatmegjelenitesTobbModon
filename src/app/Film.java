@@ -34,6 +34,10 @@ public class Film {
     public boolean isKorhataros() {
         return korhataros;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Film{" + "rendezo=" + rendezo + ", cim=" + cim + ", kiadasEve=" + kiadasEve + ", pont=" + pont + ", korhataros=" + korhataros + '}';
+    }
+   
 }
