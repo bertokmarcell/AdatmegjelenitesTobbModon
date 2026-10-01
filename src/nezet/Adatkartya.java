@@ -8,16 +8,13 @@ public class Adatkartya {
     private Filmek modell;
     public  Adatkartya(Filmek model){
         this.modell=model;
-        Megjelenit();
+        
     }
     public void Megjelenit(){
         for(Film film: modell.getFilmek()){
             kartyasmegjel(film);
         }
     } 
-    public void fej(){
-        
-    }
     private void cim(Film film) {
         String text = film.getCim();
         int width = 40;
@@ -57,6 +54,20 @@ public class Adatkartya {
         ev(film);
         rating(film);
         korhataros(film);
-        
     }
+    public String totxt(){
+        String text = "";
+        for(Film film : modell.getFilmek()){
+            text +=film.getRendezo()+" "+  film.getCim()+" "+film.getKiadasEve()+" "+film.getPont()+" "+film.isKorhataros()+" "+"\n";
+        }
+
+        return text;
+    
+    }
+
+    @Override
+    public String toString() {
+        return "Adatkartya{" + "modell=" + modell + '}';
+    }
+    
 }
